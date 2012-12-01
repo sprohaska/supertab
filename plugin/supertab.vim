@@ -808,7 +808,8 @@ endfunction " }}}
       let map = s:ExpandMap(map)
       exec "inoremap <script> <cr> <c-r>=<SID>SelectCompletion(" . cr . ")<cr>" . map
     else
-      inoremap <cr> <c-r>=<SID>SelectCompletion(1)<cr>
+      " inoremap <cr> <c-r>=<SID>SelectCompletion(1)<cr>
+      inoremap <c-space> <c-r>=<SID>SelectCompletion(1)<cr>
     endif
     function! s:SelectCompletion(cr)
       " selecting a completion
